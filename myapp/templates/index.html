@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Adoption Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f6fa; color: #222; }
+        header { background: #72b9c5; color: white; padding: 1rem 2rem; }
+        nav { margin: 1rem 2rem; }
+        nav a { color: #72b9c5; margin-right: 1.5rem; text-decoration: none; font-weight: bold; }
+        .container { max-width: 900px; margin: 2rem auto; background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+        h1, h2 { color: #2b6777; }
+        .pet-list { display: flex; flex-wrap: wrap; gap: 2rem; }
+        .pet-card { background: #def3f6; border-radius: 6px; padding: 1rem; flex: 1 1 250px; box-shadow: 0 2px 4px rgba(0,0,0,0.04);}
+        .pet-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px;}
+        .adopt-form { margin-top: 2rem; background: #f7fafd; padding: 1rem 1.5rem; border-radius: 4px;}
+        label { display: block; margin: 0.5rem 0 0.2rem;}
+        input, select, textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 4px; border: 1px solid #bcd4da;}
+        button { background: #2b6777; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px;}
+        button:hover { background: #399ab9; }
+        @media (max-width: 600px) {
+            .container { padding: 0.5rem; }
+            .pet-list { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Adoption Service</h1>
+        <p>Find your new best friend and give a pet a loving home.</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Available Pets</a>
+        <a href="#">Adopt</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Available Pets for Adoption</h2>
+        <div class="pet-list">
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?fit=crop&w=600&q=80" alt="Bella the Dog">
+                <h3>Bella</h3>
+                <p><strong>Species:</strong> Dog</p>
+                <p><strong>Breed:</strong> Labrador</p>
+                <p><strong>Age:</strong> 2 years</p>
+                <p>Bella is a friendly and playful Labrador looking for a loving family.</p>
+            </div>
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1518715308788-30057527ade5?fit=crop&w=600&q=80" alt="Milo the Cat">
+                <h3>Milo</h3>
+                <p><strong>Species:</strong> Cat</p>
+                <p><strong>Breed:</strong> Siamese</p>
+                <p><strong>Age:</strong> 1 year</p>
+                <p>Milo is a gentle, quiet cat who loves naps and snuggles.</p>
+            </div>
+            <div class="pet-card">
+                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?fit=crop&w=600&q=80" alt="Coco the Rabbit">
+                <h3>Coco</h3>
+                <p><strong>Species:</strong> Rabbit</p>
+                <p><strong>Breed:</strong> Holland Lop</p>
+                <p><strong>Age:</strong> 7 months</p>
+                <p>Coco is a sweet rabbit that loves to munch on greens and explore.</p>
+            </div>
+        </div>
+
+        <form class="adopt-form">
+            <h2>Adoption Request Form</h2>
+            <label for="pet">Pet to Adopt:</label>
+            <select id="pet" name="pet" required>
+                <option value="" disabled selected>Select a pet</option>
+                <option value="Bella">Bella (Dog)</option>
+                <option value="Milo">Milo (Cat)</option>
+                <option value="Coco">Coco (Rabbit)</option>
+            </select>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="notes">Why do you want to adopt?</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your home and experience with pets..."></textarea>
+
+            <button type="submit">Submit Adoption Request</button>
+        </form>
+    </div>
+</body>
+</html>
